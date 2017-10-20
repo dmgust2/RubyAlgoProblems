@@ -1,4 +1,4 @@
-
+# CategoryTree Node class
 class CatNode
   attr_accessor :name, :left_child, :right_child
 
@@ -60,6 +60,7 @@ class CatNode
   end
 end
 
+# CategoryTree class
 class CategoryTree
   attr_accessor :root
 
@@ -134,6 +135,9 @@ class CategoryTree
   end
 end
 
+#
+# Running
+# --------------------------------------------------------------------------
 c = CategoryTree.new
 #c.print_tree
 # Populate
@@ -147,7 +151,6 @@ c.add_category('D', 'B')
 #c.print_tree
 c.add_category('E', 'B')
 c.print_tree
-
 
 # Invalids
 # `insert_child': Parent categories full! (ArgumentError)
@@ -163,6 +166,9 @@ c.print_tree
 #c.add_category('F', 'G')
 
 
+#
+# TESTS
+#
 # Test 0
 puts (c.get_children('A') || []).join(',')
 
